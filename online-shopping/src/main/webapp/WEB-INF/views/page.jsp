@@ -39,7 +39,6 @@
 
 <div class="wrapper">
 	<body>
-
 		<!-- Navigation -->
 		<%@include file="./shared/navbar.jsp"%>
 
@@ -59,10 +58,9 @@
 				<%@include file="contact.jsp"%>
 			</c:if>
 			<!-- Load only when user clicks List Products -->
-			<%-- <c:if test="${userClickListProducts == true }">
-		<%@include file="list_products.jsp"%>
-	</c:if>
- --%>
+			<c:if test="${userClickAllProducts==true or userClickCategoryProducts==true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
 		</div>
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
